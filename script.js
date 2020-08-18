@@ -73,11 +73,7 @@ let users = [
     }
 ];
 
-let youngerUsers = users.filter(item => {
-    if (item.age < 18) {
-        return item;
-    }
-});
+let youngerUsers = users.filter( item => item.age < 18 );
 console.log(youngerUsers);
 
 let usersWithFullname = users.map(item => {
@@ -85,7 +81,14 @@ let usersWithFullname = users.map(item => {
     newItem.fullName = item.firstName + ' ' + item.lastName;
     return newItem;
 });
+let usersWithFullnameOnly = users.map(item => {
+    let newItem = {};
+    newItem.fullName = item.firstName + ' ' + item.lastName;
+    return newItem;
+});
+
 console.log(usersWithFullname);
+console.log(usersWithFullnameOnly);
 
 //4
 function customShift(arr) {
@@ -164,4 +167,6 @@ alert( hello('Harry') );
 let plus = createAdder(5);
 alert( plus(1) );
 alert( plus(5) );
+
+
 
